@@ -1,11 +1,19 @@
 package pe.edu.cibertec.spring_mvc.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class FilmListDTO {
+    // Getters y Setters
     private Long filmId;
     private String title;
     private String languageName;
     private Integer rentalDuration;
     private Double rentalRate;
+    // Getter para descripción
+    // Setter para descripción
     private String description; // Nueva propiedad añadida
 
     // Constructor con todos los parámetros, incluida la nueva propiedad
@@ -27,52 +35,4 @@ public class FilmListDTO {
         this.rentalRate = rentalRate;
     }
 
-    // Getters y Setters
-    public Long getFilmId() {
-        return filmId;
-    }
-
-    public void setFilmId(Long filmId) {
-        this.filmId = filmId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getLanguageName() {
-        return languageName;
-    }
-
-    public void setLanguageName(String languageName) {
-        this.languageName = languageName;
-    }
-
-    public Integer getRentalDuration() {
-        return rentalDuration;
-    }
-
-    public void setRentalDuration(Integer rentalDuration) {
-        this.rentalDuration = rentalDuration;
-    }
-
-    public Double getRentalRate() {
-        return rentalRate;
-    }
-
-    public void setRentalRate(Double rentalRate) {
-        this.rentalRate = rentalRate;
-    }
-
-    public String getDescription() { // Getter para descripción
-        return description;
-    }
-
-    public void setDescription(String description) { // Setter para descripción
-        this.description = description;
-    }
 }

@@ -37,7 +37,7 @@ public class FilmController {
     @GetMapping
     public String listFilms(Model model) {
         model.addAttribute("films", filmService.getAllFilms());
-        return "list"; // Asegúrate de que este es el nombre correcto del template.
+        return "list";
     }
 
     /**
@@ -47,7 +47,7 @@ public class FilmController {
     public String filmDetails(@PathVariable Long id, Model model) {
         FilmDetailDTO film = filmService.getFilmById(id);
         if (film == null) {
-            return "redirect:/films?error=notfound"; // Redirige si no encuentra la película.
+            return "redirect:/films?error=notfound";
         }
         model.addAttribute("film", film);
         return "details";
